@@ -47,7 +47,6 @@ public class Main1 {
         int retorno_letra = 0;
         int retorno_ce2 = 0;
         int retorno_ced = 0;
-        int retorno_can = 0;
         boolean retorno_vac;
 
         Scanner scan = new Scanner(System.in);
@@ -189,7 +188,6 @@ public class Main1 {
                         try {
                             System.out.println("Numero de computadores que se desea añadirle: ");
                             Num_comp = scan.nextInt();
-                            scan.nextLine();
                             
                         } catch (InputMismatchException e) {
                             System.out.println("Error");
@@ -197,7 +195,7 @@ public class Main1 {
                         scan.nextLine();
                     } while (Num_comp <= 0);
 
-                    retorno_can = HelperValidacion.ValidarCantidadRango(Num_comp);
+                    int retorno_can = HelperValidacion.ValidarCantidadRango(Num_comp);
 
                     //Creacion de la lista de computadores
                     if (retorno_can == 1) {

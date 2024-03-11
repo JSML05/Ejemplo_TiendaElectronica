@@ -182,9 +182,16 @@ public class Main {
                     //Fin direccion
 
                     //Cantidad de computadores
-                    System.out.println("Numero de computadores que se desea añadirle: ");
-                    Num_comp = scan.nextInt();
-                    scan.nextLine();
+                    do {
+                        try {
+                            System.out.println("Numero de computadores que se desea añadirle: ");
+                            Num_comp = scan.nextInt();
+
+                        } catch (InputMismatchException e) {
+                            System.out.println("Error");
+                        }
+                        scan.nextLine();
+                    } while (Num_comp <= 0);
 
                     retorno_can = HelperValidacion.ValidarCantidadRango(Num_comp);
 
